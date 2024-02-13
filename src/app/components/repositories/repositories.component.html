@@ -1,30 +1,38 @@
-<div class="output  d-none">
-    <div class="content-actions"> 
-        <div class="pages_n">
-            show&nbsp;
-            <select onchange="refresh_data(event)" name="" id="per_page">
-                <option value="10">10</option>
-                <option value="30">30</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-            </select>&nbsp;repositories 
+<div class="">
+    <app-profile></app-profile>
+    <div class="output  d-none">
+        <div class="content-actions">
+            <div class="pages_n">
+                show&nbsp;
+                <select onchange="refresh_data(event)" name="" id="per_page">
+                    <option value="10">10</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>&nbsp;repositories
+            </div>
         </div>
-    </div>
-
-    <div class="cards">
-        <div class="loading d-none">
-            <div class="loader"></div>
-            <h4>Looking For Repositories</h4>
-        </div>
-        <div class="error-msg"> 
-        </div>
-        <div class="cards-content"> 
-             <app-repocard></app-repocard>
-             <app-repocard></app-repocard>
-             <app-repocard></app-repocard>
-             <app-repocard></app-repocard>
-        </div>
-    </div>
-    <app-pagination></app-pagination>
     
+        <div class="cards">
+            <div class="loading d-none">
+                <div class="loader"></div>
+                <h4>Looking For Repositories</h4>
+            </div>
+            <div class="error-msg">
+            </div>
+            <div class="cards-content">
+                 <app-repocard></app-repocard>
+                 <app-repocard></app-repocard>
+                 <app-repocard></app-repocard>
+                 <app-repocard></app-repocard>
+            </div>
+        </div>
+        <app-pagination></app-pagination>
+        <ul>
+            <li *ngFor="let person of data"> (1)
+              {{ person.title }}
+            </li>
+           </ul>
+    
+    </div>
 </div>
