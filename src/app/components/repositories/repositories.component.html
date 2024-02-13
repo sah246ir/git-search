@@ -1,6 +1,6 @@
 <div class="">
-    <app-profile></app-profile>
-    <div class="output  d-none">
+    <app-profile [loading]="loading"></app-profile>
+    <div class="output ">
         <div class="content-actions">
             <div class="pages_n">
                 show&nbsp;
@@ -20,11 +20,13 @@
             </div>
             <div class="error-msg">
             </div>
-            <div class="cards-content">
-                 <app-repocard></app-repocard>
-                 <app-repocard></app-repocard>
-                 <app-repocard></app-repocard>
-                 <app-repocard></app-repocard>
+            <div class="loading-area" >
+                <div class="cards-content">
+                     <app-repocard [loading]="loading"></app-repocard>
+                     <app-repocard [loading]="loading"></app-repocard>
+                     <app-repocard [loading]="loading"></app-repocard>
+                     <app-repocard [loading]="loading"></app-repocard>
+                </div>
             </div>
         </div>
         <app-pagination></app-pagination>
