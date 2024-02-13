@@ -93,3 +93,45 @@
     text-decoration: none;
     color: rgb(255, 255, 255); 
 }
+
+
+ 
+
+ .card.loading{
+    pointer-events: none;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+ }
+.card.loading .topic a{
+    color: transparent!important;
+}
+.card.loading .topic {
+    animation: skeleton-light 1200ms linear infinite alternate; 
+}
+.card.loading .repo-head>* {
+    animation: skeleton-light 1200ms linear infinite alternate; 
+    color: transparent!important;
+}
+.card.loading .langs>* {
+    animation: skeleton-light 1200ms linear infinite alternate; 
+    color: transparent!important;
+}
+.card.loading .desc  {
+    animation: skeleton-light 1200ms linear infinite alternate; 
+    color: transparent!important;
+}
+.card.loading .view-code a  {
+    animation: skeleton-light 1200ms linear infinite alternate;  
+    color: #323c4a;
+}
+ 
+
+@keyframes skeleton-light {
+    from {
+        background-color: #1a2027;
+    }
+    to {
+        background-color: #323c4a;
+    }
+}
