@@ -4,6 +4,7 @@ import { RepocardComponent } from '../repocard/repocard.component';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ProfileComponent } from '../profile/profile.component';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-repositories',
   standalone: true,
@@ -13,17 +14,24 @@ import { ProfileComponent } from '../profile/profile.component';
 })
 export class RepositoriesComponent implements OnInit {
   http = inject(HttpClient)
+  route = inject(ActivatedRoute)
   data:any[] = []
+  loading = true
 
   ngOnInit(): void {
+    this.loading = true
     this.fetchdata();
+    console.log(this.route.snapshot.params)
    }
 
   fetchdata(){
-    this.http.get("https://jsonplaceholder.typicode.com/posts").subscribe((data:any)=>{ 
-      this.data = data.slice(1,5)
-      console.log(this.data)
-    })
+    setTimeout(() => {
+      this.http.get("https://jsonplaceholder.typicode.com/posts").subscribe((data: any) => { 
+        this.data = data.slice(1, 5);
+        console.log(this.data);
+        this.loading = false;
+      });
+    }, 3000);
   }
 
 }
