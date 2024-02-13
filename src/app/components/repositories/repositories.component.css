@@ -1,0 +1,30 @@
+.cards{    
+    padding: 35px;
+    background-color: #080c11;
+    margin: 15px;
+    border-radius: 10px;
+    border: 1px solid #373e47;
+    position: relative;
+}
+.cards-content{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;  
+    border-radius: 10px; 
+}
+
+.cards-content>*{
+    flex-grow: 1;
+}
+
+.content-actions{ 
+    gap: 25px;
+}
+
+ 
+
+.pages_n{
+    color:white; 
+    margin-left: 20px;
+}
