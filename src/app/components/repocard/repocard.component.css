@@ -1,0 +1,95 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    background: #12161b; 
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 1px solid #2f353d;
+
+}
+.card>.head{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-block: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.langs{
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.lang{
+    background-color: rgba(255, 0, 0, 0.877);
+    padding: 10px;
+    border-radius: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.lang:nth-of-type(2n){
+    background-color: rgba(245, 107, 15, 0.877);
+
+}
+
+
+.repo-head>h1{
+     
+    font-size: 2.7ch;
+   word-break: break-all;
+}
+
+.repo-head>p{ 
+    cursor: pointer;
+    color: rgb(114, 114, 114);
+    transition: 444ms;
+}
+.repo-head>p:hover{ 
+    color: rgb(167, 167, 167);
+}
+
+.view-code>a{
+    color:white;
+    text-decoration: none;
+    font-size: 1.2ch;
+    font-weight: 500;
+    background-color: rgb(39, 139, 58);
+    padding: 7px 5px;
+    border-radius: 5px;
+    transition: 444ms;
+}
+
+.view-code>a:hover{  
+    background-color: rgb(44, 177, 68); 
+} 
+
+.topics{
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.topic{
+    background-color: rgba(16, 82, 158, 0.877);
+    padding: 10px; 
+    border-radius: 5px;
+    color: rgb(255, 255, 255); 
+    transition: 444ms;
+}
+
+.topic:hover{
+    background-color: rgba(12, 69, 133, 0.877);
+
+}
+.topic>a{ 
+    text-decoration: none;
+    color: rgb(255, 255, 255); 
+}
