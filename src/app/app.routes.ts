@@ -7,7 +7,11 @@ export const routes: Routes = [
         path:''
     },
     {
-        component:RepositoriesComponent,
+        component:HomeComponent,
         path:'search'
+    },
+    {
+        component:RepositoriesComponent,
+        path:'search/:uname'
     }
 ];
